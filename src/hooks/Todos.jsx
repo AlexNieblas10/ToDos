@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function useTodos(props) {
-	const storage = JSON.parse(window.localStorage.data);
+	const storage = JSON?.parse(window.localStorage.data);
 
 	const [hechas, setHechas] = useState(false);
 

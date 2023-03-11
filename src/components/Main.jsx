@@ -11,7 +11,7 @@ export function Main(props) {
 	useEffect(() => {
 		if (storage != undefined) {
 			setArrayToDo(storage);
-		} else return;
+		}
 	}, []);
 
 	return (
