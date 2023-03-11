@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useTodos } from "../hooks/Todos";
 
 export function Main(props) {
-	const storage = JSON?.parse(window.localStorage.data);
+	const storage = window.localStorage.data ? JSON.parse(window.localStorage.data) :[]
 	const { arrayToDo, setArrayToDo } = props;
 	const { hechas, setHechas, rmHechas } = useTodos({
 		setArrayToDo,
