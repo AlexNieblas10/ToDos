@@ -2,16 +2,15 @@ import { useEffect } from "react";
 import { useTodos } from "../hooks/Todos";
 
 export function Main(props) {
+	const storage = JSON?.parse(window.localStorage.data);
 	const { arrayToDo, setArrayToDo } = props;
-	const { hechas, setHechas, storage, rmHechas } = useTodos({
+	const { hechas, setHechas, rmHechas } = useTodos({
 		setArrayToDo,
 		arrayToDo,
 	});
 
 	useEffect(() => {
-		if (storage != undefined) {
-			setArrayToDo(storage);
-		}
+		setArrayToDo(storage);
 	}, []);
 
 	return (

@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export function useTodos(props) {
-	const storage = JSON?.parse(window.localStorage.data);
 
 	const [hechas, setHechas] = useState(false);
 
@@ -15,5 +14,5 @@ export function useTodos(props) {
 		window.localStorage.setItem("data", JSON.stringify(tareasPorHacer));
 	}
 
-	return { hechas, setHechas,  storage, rmHechas };
+	return { hechas, setHechas, rmHechas };
 }
