@@ -34,7 +34,7 @@ export function Header(props) {
 	return (
 		<section className="mainContainerHeader">
 			<section className="title">
-				<h1>To-Do</h1>
+				<h1>To-Do App</h1>
 			</section>
 
 			<form onSubmit={handleSubmit} className="form">

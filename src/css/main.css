@@ -1,24 +1,48 @@
-.mainContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 28px;
-  gap: 20px;
+@keyframes flow {
+	0% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
 }
 
-.mainContainer > .toDo{
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
+.mainContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 28px;
+	gap: 20px;
 }
 
-.mainContainer > .toDo > h2{
-  margin: 0;
-  font-size: 16px;
+.mainContainer > .toDo {
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
 }
 
-.mainContainer > .toDo > button{
-  width: 30px;
-  padding: 0;
-  background-color: transparent;
+.mainContainer > .toDo > h2 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.mainContainer > .toDo > button {
+	width: 30px;
+	padding: 0;
+	background-color: transparent;
+}
+
+.mainContainerHeader h1 {
+	background: linear-gradient(to right, #ff6b6b, #ffac47);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	background-size: 200% 100%;
+	animation: flow 7s linear infinite;
+}
+
+@media (width >600px) {
+	.mainContainerHeader > .title > h1 {
+		font-size: 120px;
+	}
 }
